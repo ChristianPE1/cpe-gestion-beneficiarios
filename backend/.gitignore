@@ -1,0 +1,42 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+*.orig
+*.rej
+
+# Visual Studio
+.vs/
+.vscode/
+.idea/
+*.sln
+*.csproj.user
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Build outputs
+*.exe
+*.dll
+*.pdb
+*.xml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Logs
+logs/
+*.log
