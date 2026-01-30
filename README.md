@@ -70,27 +70,17 @@ cd challenge-powermas
 docker compose up -d
 ```
 
-Esperar unos 30 segundos para que SQL Server inicie completamente.
+### 3. Configurar la base de datos
 
-### 3. Crear la base de datos y cargar datos
-
-Ejecutar los scripts en orden:
-
+**Linux/Mac:**
 ```bash
-# Crear schema
-docker exec -i powermas-sqlserver /opt/mssql-tools18/bin/sqlcmd \
-  -S localhost -U sa -P 'PowerMas2026!' -C \
-  -i /dev/stdin < database/schema.sql
+chmod +x ./scripts/setup-db.sh
+./scripts/setup-db.sh
+```
 
-# Crear stored procedures
-docker exec -i powermas-sqlserver /opt/mssql-tools18/bin/sqlcmd \
-  -S localhost -U sa -P 'PowerMas2026!' -C -d PowerMasDB \
-  -i /dev/stdin < database/procedures.sql
-
-# Cargar datos iniciales
-docker exec -i powermas-sqlserver /opt/mssql-tools18/bin/sqlcmd \
-  -S localhost -U sa -P 'PowerMas2026!' -C -d PowerMasDB \
-  -i /dev/stdin < database/seed.sql
+**Windows (PowerShell):**
+```powershell
+.\scripts\setup-db.ps1
 ```
 
 ### 4. Iniciar el Backend
