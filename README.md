@@ -55,6 +55,12 @@ challenge-powermas/
 ### Video Demostrativo
 <video src="assets/example-video.mp4" controls width="100%"></video>
 
+## Proyecto Desplegado
+
+- Frontend: [https://cpe-powermas-challenge.netlify.app/](https://cpe-powermas-challenge.netlify.app/)
+- Backend: [https://xu552zvczj.execute-api.us-east-1.amazonaws.com/prod/api/documentos](https://xu552zvczj.execute-api.us-east-1.amazonaws.com/prod/api/documentos)
+- Base de Datos: SQL Server en AWS RDS (no accesible publicamente)
+
 ## Instalacion y Ejecucion Local
 
 ### 1. Clonar el repositorio
